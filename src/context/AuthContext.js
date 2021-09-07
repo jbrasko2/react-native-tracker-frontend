@@ -15,7 +15,7 @@ const signup = dispatch => {
       const response = await trackerApi.post('/signup', { email, password })
       console.log(response.data)
     } catch (err) {
-      console.log(err.message)
+      console.log(err.response.data)
     }
     // if we sign up, modify state, say we are authenticated
 
