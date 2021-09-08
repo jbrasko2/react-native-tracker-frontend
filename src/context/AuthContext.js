@@ -19,7 +19,7 @@ const signup = dispatch => {
     } catch (err) {
       dispatch({
         type: 'add_error',
-        payload: 'Something wehnt wrong with sign up',
+        payload: 'Something went wrong with sign up',
       })
     }
     // if we sign up, modify state, say we are authenticated
