@@ -39,11 +39,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: 200,
   },
-  errorMessage: {
-    fontSize: 16,
-    color: 'red',
-    marginLeft: 15,
-  },
   link: {
     color: 'blue',
   },

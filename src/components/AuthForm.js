@@ -10,7 +10,7 @@ const AuthForm = ({ headerText, submitButtonText, errorMessage, onSubmit }) => {
   return (
     <>
       <Spacer>
-        <Text h3>Sign Up for Tracker</Text>
+        <Text h3>{headerText}</Text>
       </Spacer>
       <Input
         label='Email'
@@ -28,16 +28,25 @@ const AuthForm = ({ headerText, submitButtonText, errorMessage, onSubmit }) => {
         autoCorrect={false}
         secureTextEntry
       />
-      {state.errorMessage ? (
-        <Text style={styles.errorMessage}>{state.errorMessage}</Text>
+      {errorMessage ? (
+        <Text style={styles.errorMessage}>{errorMessage}</Text>
       ) : null}
       <Spacer>
-        <Button title='Sign Up' onPress={() => onSubmit({ email, password })} />
+        <Button
+          title={submitButtonText}
+          onPress={() => onSubmit({ email, password })}
+        />
       </Spacer>
     </>
   )
 }
 
-export default AuthForm
+const styles = StyleSheet.create({
+  errorMessage: {
+    fontSize: 16,
+    color: 'red',
+    marginLeft: 15,
+  },
+})
 
-const styles = StyleSheet.create({})
+export default AuthForm
