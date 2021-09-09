@@ -14,3 +14,5 @@ export const navigate = (routeName, params) => {
     })
   )
 }
+
+// this allows us to access navigation from outside of a React component (e.g. AuthContext)
