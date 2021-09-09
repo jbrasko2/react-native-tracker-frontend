@@ -16,13 +16,10 @@ const SigninScreen = ({ navigation }) => {
         errorMessage={state.errorMessage}
         onSubmit={signin}
       />
-      <Spacer>
-        <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
-          <Text style={styles.link}>
-            Dont' have an account? Sign up instead
-          </Text>
-        </TouchableOpacity>
-      </Spacer>
+      <NavLink
+        routeName='Signup'
+        linkText="Don't have an account? Sign up instead"
+      />
     </View>
   )
 }
