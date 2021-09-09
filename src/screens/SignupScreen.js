@@ -3,12 +3,19 @@ import { StyleSheet, View, TouchableOpacity } from 'react-native'
 import { Text, Input, Button } from 'react-native-elements'
 import Spacer from '../components/Spacer'
 import { Context as AuthContext } from '../context/AuthContext'
+import AuthForm from '../components/AuthForm'
 
 const SignupScreen = ({ navigation }) => {
   const { state, signup } = useContext(AuthContext)
 
   return (
     <View style={styles.container}>
+      <AuthForm
+        headerText='Sign Up for Tracker'
+        submitButtonText='Sign Up'
+        errorMessage={state.errorMessage}
+        onSubmit={signup}
+      />
       <Spacer>
         <TouchableOpacity onPress={() => navigation.navigate('Signin')}>
           <Text style={styles.link}>
