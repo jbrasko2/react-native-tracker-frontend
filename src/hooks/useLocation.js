@@ -49,4 +49,5 @@ export default (shouldTrack, callback) => {
   }, [shouldTrack, callback])
 
   return [err]
+  // community convention: save hook in array
 }
