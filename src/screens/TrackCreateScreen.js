@@ -33,7 +33,7 @@ const TrackCreateScreen = ({ isFocused }) => {
 
 TrackCreateScreen.navigationOptions = {
   title: 'Add Track',
-  tabBarIcon: <AntDesign name='pluscircleo' size={24} color='black' />,
+  tabBarIcon: <AntDesign name='pluscircleo' size={20} color='black' />,
 }
 
 const styles = StyleSheet.create({})

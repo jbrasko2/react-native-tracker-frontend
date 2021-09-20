@@ -23,7 +23,7 @@ const AccountScreen = () => {
 
 AccountScreen.navigationOptions = {
   title: 'Account',
-  tabBarIcon: <Ionicons name='settings-outline' size={24} color='black' />,
+  tabBarIcon: <Ionicons name='settings-outline' size={20} color='black' />,
 }
 
 const styles = StyleSheet.create({})
