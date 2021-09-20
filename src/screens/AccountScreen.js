@@ -4,6 +4,7 @@ import { Button } from 'react-native-elements'
 import Spacer from '../components/Spacer'
 import { Context as AuthContext } from '../context/AuthContext'
 import { SafeAreaView } from 'react-navigation'
+import { Ionicons } from '@expo/vector-icons'
 
 const AccountScreen = () => {
   const { signout } = useContext(AuthContext)
@@ -18,6 +19,11 @@ const AccountScreen = () => {
       </View>
     </SafeAreaView>
   )
+}
+
+AccountScreen.navigationOptions = {
+  title: 'Account',
+  tabBarIcon: <Ionicons name='settings-outline' size={24} color='black' />,
 }
 
 const styles = StyleSheet.create({})
