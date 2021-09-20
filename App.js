@@ -11,7 +11,7 @@ import TrackListScreen from './src/screens/TrackListScreen'
 import ResolveAuthScreen from './src/screens/ResolveAuthScreen'
 import { Provider as AuthProvider } from './src/context/AuthContext'
 import { Provider as LocationProvider } from './src/context/LocationContext/'
-import { Provder as TrackProvider } from './src/context/TrackContext'
+import { Provider as TrackProvider } from './src/context/TrackContext'
 import { setNavigator } from './src/navigationRef'
 
 const switchNavigator = createSwitchNavigator({
