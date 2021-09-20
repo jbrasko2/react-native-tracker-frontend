@@ -1,4 +1,5 @@
 import createDataContext from './createDataContext'
+import trackerApi from '../api/tracker'
 
 const trackReducer = (state, actions) => {
   switch (action.type) {
@@ -9,7 +10,9 @@ const trackReducer = (state, actions) => {
 
 const fetchTracks = dispatch => () => {}
 
-const createTrack = dispatch => () => {}
+const createTrack = dispatch => async (name, locations) => {
+  await trackerApi.post('/tracks', { name, locations })
+}
 
 export const { Provider, Context } = createDataContext(
   trackReducer,
